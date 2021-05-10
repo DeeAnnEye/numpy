@@ -48,3 +48,19 @@ print (np.sort(arr))
 
 # argsort(returns index of elements when sorted)
 print (np.argsort(arr))
+
+# two dimensional array argsort
+x = np.array([[0, 3], [2, 2]])
+
+# gets index
+x_sort = np.argsort(x, axis=0) 
+
+# gets actual array
+print (np.take_along_axis(x, x_sort, axis=0)) 
+
+ind = np.unravel_index(np.argsort(x, axis=None), x.shape)
+print (x[ind])
+
+# sort on Axes
+y = np.array([(1, 0), (0, 1)], dtype=[('x', '<i4'), ('y', '<i4')])
+print(np.argsort(y, order=('y','x')))
