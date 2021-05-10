@@ -7,5 +7,6 @@
  - np.linspace
  - np.sort
  - np.argsort
+ - np.dtype
 
  and etc..
