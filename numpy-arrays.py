@@ -64,3 +64,12 @@ print (x[ind])
 # sort on Axes
 y = np.array([(1, 0), (0, 1)], dtype=[('x', '<i4'), ('y', '<i4')])
 print(np.argsort(y, order=('y','x')))
+
+# array dtype
+dt = np.dtype([('count', np.int8)])
+p = np.array([10,20,40], dt)
+print (p['count'])
+
+stDt = np.dtype([('name', 'S20'), ('age', 'i1'), ('marks', 'f4')])
+student = np.array([('Mark',36,54.2), ('James',23,76.8)], dtype=stDt)
+print(student)
