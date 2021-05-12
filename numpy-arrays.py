@@ -73,3 +73,11 @@ print (p['count'])
 stDt = np.dtype([('name', 'S20'), ('age', 'i1'), ('marks', 'f4')])
 student = np.array([('Mark',36,54.2), ('James',23,76.8)], dtype=stDt)
 print(student)
+
+# array indexing (single dimension)
+s = np.array([1,2,3,4,5])
+print(s[4])
+
+# array indexing (multi-dimension)
+r = np.array([[1,2],[3,4]])
+print(r[1,1])
