@@ -96,3 +96,8 @@ for x in f:
 l = np.array([[1, 2, 3], [4, 5, 6]])
 for x in l:
     print(x)
+
+# nditer (iterate on scalar element)
+nd = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[4,5,7]]])
+for x in np.nditer(nd):
+    print(x)
