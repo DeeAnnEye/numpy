@@ -8,5 +8,8 @@
  - np.sort
  - np.argsort
  - np.dtype
+ - np.unravel_index
+ - np.reshape
+ - np.nditer
 
  and etc..
