@@ -111,3 +111,8 @@ for x in np.nditer(adt, flags=['buffered'], op_dtypes='S'):
 step_arr = np.array([[1,2,3,4],[5,6,7,8]])
 for x in np.nditer(step_arr[:,::2]):
     print(x)
+
+# ndenumerate
+q = np.array([1,2,3,4,5])
+for idx, x in np.ndenumerate(q):
+    print(idx,x)
