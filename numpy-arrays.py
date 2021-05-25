@@ -117,9 +117,15 @@ q = np.array([1,2,3,4,5])
 for idx, x in np.ndenumerate(q):
     print(idx,x)
 
+# shape
 t = np.array([[2,3,4],[5,6,7]])
 print (t.shape)
 
 b = np.array([[1,2,3,4],[5,6,7,8]])
 b.shape = (4,2)
 print(b)
+
+# list to array
+h = [1,5,6]
+a = np.asarray(h, dtype=float)
+print(a)
