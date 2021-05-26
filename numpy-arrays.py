@@ -132,7 +132,7 @@ print(a)
 
 # frombuffer
 e = b'Hello world'
-j = np.frombuffer(e, dtype='S1') 
+j = np.frombuffer(e, dtype='S1')
 print(j)
 
 # fromiter
@@ -141,3 +141,8 @@ i = iter(u)
 
 xp = np.fromiter(i, dtype=float)
 print(xp)
+
+# array slice
+n = np.arange(10)
+sl = slice(2, 7, 2)
+print(n[sl])
