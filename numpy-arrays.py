@@ -155,3 +155,9 @@ print (x)
 
 print ('The items greater than 5 are:' )
 print (x[x > 5])
+
+# broadcasting
+k = np.array([1,2,3,4,5])
+m = np.array([10,20,30,40,50])
+w = k * m
+print(w)
