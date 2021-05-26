@@ -134,3 +134,10 @@ print(a)
 e = b'Hello world'
 j = np.frombuffer(e, dtype='S1') 
 print(j)
+
+# fromiter
+u = range(5)
+i = iter(u)
+
+xp = np.fromiter(i, dtype=float)
+print(xp)
