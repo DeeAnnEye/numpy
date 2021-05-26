@@ -146,3 +146,12 @@ print(xp)
 n = np.arange(10)
 sl = slice(2, 7, 2)
 print(n[sl])
+
+# boolean indexing
+x = np.array([[ 0,  1,  2],[ 3,  4,  5],[ 6,  7,  8],[ 9, 10, 11]]) 
+
+print ('Our array is:' )
+print (x)
+
+print ('The items greater than 5 are:' )
+print (x[x > 5])
