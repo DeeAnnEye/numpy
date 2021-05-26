@@ -98,34 +98,39 @@ for x in l:
     print(x)
 
 # nditer (iterate on scalar element)
-nd = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[4,5,7]]])
+nd = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [4, 5, 7]]])
 for x in np.nditer(nd):
     print(x)
 
 # change datatype on iteration
-adt = np.array([1,2,3,4,5])
+adt = np.array([1, 2, 3, 4, 5])
 for x in np.nditer(adt, flags=['buffered'], op_dtypes='S'):
     print(x)
 
 # iterate with step-size
-step_arr = np.array([[1,2,3,4],[5,6,7,8]])
-for x in np.nditer(step_arr[:,::2]):
+step_arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+for x in np.nditer(step_arr[:, ::2]):
     print(x)
 
 # ndenumerate
-q = np.array([1,2,3,4,5])
+q = np.array([1, 2, 3, 4, 5])
 for idx, x in np.ndenumerate(q):
-    print(idx,x)
+    print(idx, x)
 
 # shape
-t = np.array([[2,3,4],[5,6,7]])
-print (t.shape)
+t = np.array([[2, 3, 4], [5, 6, 7]])
+print(t.shape)
 
-b = np.array([[1,2,3,4],[5,6,7,8]])
-b.shape = (4,2)
+b = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+b.shape = (4, 2)
 print(b)
 
 # list to array
-h = [1,5,6]
+h = [1, 5, 6]
 a = np.asarray(h, dtype=float)
 print(a)
+
+# frombuffer
+e = b'Hello world'
+j = np.frombuffer(e, dtype='S1') 
+print(j)
